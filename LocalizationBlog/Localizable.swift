@@ -39,7 +39,7 @@ public protocol XIBLocalizable {
 }
 
 extension UILabel: XIBLocalizable {
-    public var xibLocKey: String? {
+    @IBInspectable public var xibLocKey: String? {
         get { return nil }
         set(key) {
             text = key?.localized
@@ -48,7 +48,7 @@ extension UILabel: XIBLocalizable {
 }
 
 extension UIButton: XIBLocalizable {
-    public var xibLocKey: String? {
+    @IBInspectable public var xibLocKey: String? {
         get { return nil }
         set(key) {
             setTitle(key?.localized, for: .normal)
