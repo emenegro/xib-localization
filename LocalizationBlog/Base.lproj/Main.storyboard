@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13189.4" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13165.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -44,16 +44,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY0-hb-qiL">
-                                <rect key="frame" x="10" y="247" width="355" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="S5q-jv-tYY"/>
-                                </constraints>
-                                <state key="normal" title="Buy_Button"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="to_buy"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Information_Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzD-uO-GEN" userLabel="informationLabel">
                                 <rect key="frame" x="10" y="131" width="355" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -63,23 +53,47 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="info"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="wRM-S0-sd4">
+                                <rect key="frame" x="10" y="237" width="355" height="29"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                    <segment title=""/>
+                                </segments>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKeys" value="hard_cover,paperback,digital"/>
+                                </userDefinedRuntimeAttributes>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY0-hb-qiL">
+                                <rect key="frame" x="10" y="285" width="355" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="S5q-jv-tYY"/>
+                                </constraints>
+                                <state key="normal" title="Buy_Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="to_buy"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="7dV-Yk-ofc" firstAttribute="leading" secondItem="vzD-uO-GEN" secondAttribute="leading" id="2Ey-a7-mVb"/>
+                            <constraint firstItem="wRM-S0-sd4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="7Zb-cq-gAc"/>
                             <constraint firstItem="Axl-vE-Aj2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8ow-Zt-7OV"/>
                             <constraint firstItem="7dV-Yk-ofc" firstAttribute="top" secondItem="vzD-uO-GEN" secondAttribute="bottom" constant="5" id="F6x-fC-b0g"/>
-                            <constraint firstItem="cY0-hb-qiL" firstAttribute="top" secondItem="7dV-Yk-ofc" secondAttribute="bottom" constant="20" id="GhW-ar-aG7"/>
                             <constraint firstItem="7dV-Yk-ofc" firstAttribute="trailing" secondItem="vzD-uO-GEN" secondAttribute="trailing" id="INl-QA-i06"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cY0-hb-qiL" secondAttribute="trailing" constant="10" id="JoG-7Y-5Te"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vzD-uO-GEN" secondAttribute="trailing" constant="10" id="TSz-aE-85F"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Axl-vE-Aj2" secondAttribute="trailing" constant="10" id="ViZ-Pf-EpN"/>
+                            <constraint firstItem="cY0-hb-qiL" firstAttribute="top" secondItem="wRM-S0-sd4" secondAttribute="bottom" constant="20" id="X8M-aP-PdD"/>
+                            <constraint firstItem="wRM-S0-sd4" firstAttribute="top" secondItem="7dV-Yk-ofc" secondAttribute="bottom" constant="10" id="XcV-8U-H4U"/>
                             <constraint firstItem="dWm-8h-nrh" firstAttribute="top" secondItem="Axl-vE-Aj2" secondAttribute="bottom" constant="5" id="YQS-zb-W9O"/>
                             <constraint firstItem="vzD-uO-GEN" firstAttribute="top" secondItem="dWm-8h-nrh" secondAttribute="bottom" constant="15" id="a75-zf-rP3"/>
                             <constraint firstItem="vzD-uO-GEN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ccQ-FT-3Je"/>
                             <constraint firstItem="cY0-hb-qiL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="g8C-Ud-IWL"/>
                             <constraint firstItem="Axl-vE-Aj2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lhl-le-fRf"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dWm-8h-nrh" secondAttribute="trailing" constant="10" id="nbg-H6-GXK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wRM-S0-sd4" secondAttribute="trailing" constant="10" id="nvE-IZ-FXP"/>
                             <constraint firstItem="dWm-8h-nrh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="rdP-Zc-dWU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>

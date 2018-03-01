@@ -38,6 +38,10 @@ public protocol XIBLocalizable {
     var xibLocKey: String? { get set }
 }
 
+public protocol XIBMultiLocalizable {
+    var xibLocKeys: String? { get set }
+}
+
 extension UILabel: XIBLocalizable {
     @IBInspectable public var xibLocKey: String? {
         get { return nil }
@@ -52,6 +56,18 @@ extension UIButton: XIBLocalizable {
         get { return nil }
         set(key) {
             setTitle(key?.localized, for: .normal)
+        }
+    }
+}
+
+extension UISegmentedControl: XIBMultiLocalizable {
+    @IBInspectable public var xibLocKeys: String? {
+        get { return nil }
+        set(keys) {
+            guard let keys = keys?.components(separatedBy: ","), !keys.isEmpty else { return }
+            for (index, title) in keys.enumerated() {
+                setTitle(title.localized, forSegmentAt: index)
+            }
         }
     }
 }

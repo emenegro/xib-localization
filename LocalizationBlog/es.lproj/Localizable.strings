@@ -2,3 +2,6 @@
 "title" = "Título";
 "info" = "Información";
 "to_buy" = "Comprar";
+"hard_cover" = "Tapa dura";
+"digital" = "Digital";
+"paperback" = "Tapa blanda";

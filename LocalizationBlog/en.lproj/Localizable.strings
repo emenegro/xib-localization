@@ -2,3 +2,6 @@
 "title" = "Title";
 "info" = "Information";
 "to_buy" = "Buy";
+"hard_cover" = "Hard Cover";
+"digital" = "Digital";
+"paperback" = "Paperback";
