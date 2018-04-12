@@ -71,3 +71,12 @@ extension UISegmentedControl: XIBMultiLocalizable {
         }
     }
 }
+
+extension UINavigationItem: XIBLocalizable {
+    @IBInspectable public var xibLocKey: String? {
+        get { return nil }
+        set(key) {
+            title = key?.localized
+        }
+    }
+}
