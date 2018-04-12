@@ -23,7 +23,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u5y-O4-rjo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-711" y="117"/>
+            <point key="canvasLocation" x="-174" y="12"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -90,12 +90,30 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="to_buy"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <tabBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-jH-tk3">
+                                <rect key="frame" x="0.0" y="618" width="375" height="49"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <tabBarItem id="MU0-ii-lZk">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="tab_1"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tabBarItem>
+                                    <tabBarItem id="uFh-CO-mGg">
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="tab_2"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </tabBarItem>
+                                </items>
+                            </tabBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="EuJ-jH-tk3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="1FY-t8-rw4"/>
                             <constraint firstItem="7dV-Yk-ofc" firstAttribute="leading" secondItem="vzD-uO-GEN" secondAttribute="leading" id="2Ey-a7-mVb"/>
                             <constraint firstItem="wRM-S0-sd4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="7Zb-cq-gAc"/>
                             <constraint firstItem="Axl-vE-Aj2" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="8ow-Zt-7OV"/>
+                            <constraint firstItem="EuJ-jH-tk3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="BfL-G5-3Cp"/>
                             <constraint firstItem="7dV-Yk-ofc" firstAttribute="top" secondItem="vzD-uO-GEN" secondAttribute="bottom" constant="5" id="F6x-fC-b0g"/>
                             <constraint firstItem="7dV-Yk-ofc" firstAttribute="trailing" secondItem="vzD-uO-GEN" secondAttribute="trailing" id="INl-QA-i06"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cY0-hb-qiL" secondAttribute="trailing" constant="10" id="JoG-7Y-5Te"/>
@@ -105,6 +123,7 @@
                             <constraint firstItem="wRM-S0-sd4" firstAttribute="top" secondItem="7dV-Yk-ofc" secondAttribute="bottom" constant="10" id="XcV-8U-H4U"/>
                             <constraint firstItem="dWm-8h-nrh" firstAttribute="top" secondItem="Axl-vE-Aj2" secondAttribute="bottom" constant="5" id="YQS-zb-W9O"/>
                             <constraint firstItem="vzD-uO-GEN" firstAttribute="top" secondItem="dWm-8h-nrh" secondAttribute="bottom" constant="15" id="a75-zf-rP3"/>
+                            <constraint firstItem="EuJ-jH-tk3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="aV9-d2-q5w"/>
                             <constraint firstItem="vzD-uO-GEN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="ccQ-FT-3Je"/>
                             <constraint firstItem="cY0-hb-qiL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="g8C-Ud-IWL"/>
                             <constraint firstItem="Axl-vE-Aj2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="lhl-le-fRf"/>
@@ -115,6 +134,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="6Ni-oK-ugH">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="cuk-lp-CkJ">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="left_bar_item"/>
+                            </userDefinedRuntimeAttributes>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="Vu5-ig-SdA">
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="right_bar_item"/>
+                            </userDefinedRuntimeAttributes>
+                        </barButtonItem>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="string" keyPath="xibLocKey" value="nav_bar_title"/>
                         </userDefinedRuntimeAttributes>
@@ -122,6 +151,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="722" y="11"/>
         </scene>
     </scenes>
 </document>

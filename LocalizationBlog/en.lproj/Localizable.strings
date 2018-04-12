@@ -6,3 +6,7 @@
 "digital" = "Digital";
 "paperback" = "Paperback";
 "nav_bar_title" = "XIBLocalizable Example";
+"left_bar_item" = "Left item";
+"right_bar_item" = "Right item";
+"tab_1" = "Tab One";
+"tab_2" = "Tab Two";

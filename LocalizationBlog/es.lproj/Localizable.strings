@@ -6,3 +6,7 @@
 "digital" = "Digital";
 "paperback" = "Tapa blanda";
 "nav_bar_title" = "Ejemplo de XIBLocalizable";
+"left_bar_item" = "Item izdo.";
+"right_bar_item" = "Item dcho.";
+"tab_1" = "Tab Uno";
+"tab_2" = "Tab Dos";

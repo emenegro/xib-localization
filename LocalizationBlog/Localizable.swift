@@ -80,3 +80,13 @@ extension UINavigationItem: XIBLocalizable {
         }
     }
 }
+
+// Localizes UIBarButtonItem and UITabBarItem
+extension UIBarItem: XIBLocalizable {
+    @IBInspectable public var xibLocKey: String? {
+        get { return nil }
+        set(key) {
+            title = key?.localized
+        }
+    }
+}
