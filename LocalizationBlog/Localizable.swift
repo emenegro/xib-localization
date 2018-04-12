@@ -38,10 +38,6 @@ public protocol XIBLocalizable {
     var xibLocKey: String? { get set }
 }
 
-public protocol XIBMultiLocalizable {
-    var xibLocKeys: String? { get set }
-}
-
 extension UILabel: XIBLocalizable {
     @IBInspectable public var xibLocKey: String? {
         get { return nil }
@@ -60,6 +56,29 @@ extension UIButton: XIBLocalizable {
     }
 }
 
+extension UINavigationItem: XIBLocalizable {
+    @IBInspectable public var xibLocKey: String? {
+        get { return nil }
+        set(key) {
+            title = key?.localized
+        }
+    }
+}
+
+extension UIBarItem: XIBLocalizable { // Localizes UIBarButtonItem and UITabBarItem
+    @IBInspectable public var xibLocKey: String? {
+        get { return nil }
+        set(key) {
+            title = key?.localized
+        }
+    }
+}
+
+// MARK: Special protocol to localize multiple texts in the same control
+public protocol XIBMultiLocalizable {
+    var xibLocKeys: String? { get set }
+}
+
 extension UISegmentedControl: XIBMultiLocalizable {
     @IBInspectable public var xibLocKeys: String? {
         get { return nil }
@@ -72,21 +91,16 @@ extension UISegmentedControl: XIBMultiLocalizable {
     }
 }
 
-extension UINavigationItem: XIBLocalizable {
-    @IBInspectable public var xibLocKey: String? {
-        get { return nil }
-        set(key) {
-            title = key?.localized
-        }
-    }
+// MARK: Special protocol to localizaze UITextField's placeholder
+public protocol UITextFieldXIBLocalizable {
+    var xibPlaceholderLocKey: String? { get set }
 }
 
-// Localizes UIBarButtonItem and UITabBarItem
-extension UIBarItem: XIBLocalizable {
-    @IBInspectable public var xibLocKey: String? {
+extension UITextField: UITextFieldXIBLocalizable {
+    @IBInspectable public var xibPlaceholderLocKey: String? {
         get { return nil }
         set(key) {
-            title = key?.localized
+            placeholder = key?.localized
         }
     }
 }
