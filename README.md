@@ -1,6 +1,6 @@
 # Easy XIB and Storyboard Localization
 
-![Swift 4.2](https://img.shields.io/badge/swift-4.2-orange.svg) ![Xcode 10.0](https://img.shields.io/badge/xcode-10.0-blue.svg)
+![Swift 5.0](https://img.shields.io/badge/swift-5.0-orange.svg) ![Xcode 11.1](https://img.shields.io/badge/xcode-11.1-blue.svg)
 
 Example project for my post [Easy XIB and Storyboard Localization](https://medium.com/@mario.negro.martin/easy-xib-and-storyboard-localization-b2794c69c9db).
 
